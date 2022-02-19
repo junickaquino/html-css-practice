@@ -1,0 +1,23 @@
+// ========== Setup ===============
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(99, 99, 253);
+  text-shadow: 2px 2px rgb(37, 37, 37);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 0.5em;
+    border: 2px solid black;
+  }
+}

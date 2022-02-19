@@ -1,0 +1,21 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #6363fd;
+  text-shadow: 2px 2px #252525;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.5em;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=style.css.map */
