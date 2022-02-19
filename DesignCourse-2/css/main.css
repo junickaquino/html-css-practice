@@ -20,15 +20,13 @@ a {
   width: 100%;
   height: 100vh;
   z-index: -1;
+  -webkit-animation: introLoad 2s forwards;
+          animation: introLoad 2s forwards;
 }
 
 .logo {
   color: white;
   font-weight: bold;
-}
-
-.logo span {
-  color: red;
 }
 
 nav {
@@ -81,8 +79,8 @@ header {
 }
 
 header svg {
-  width: 3em;
-  margin-top: -0.6em;
+  width: 2em;
+  margin-top: -0.5em;
   cursor: pointer;
 }
 
@@ -99,13 +97,17 @@ h1 {
 section.hero {
   color: white;
   height: 90vh;
+  -webkit-animation: moveDown 1s ease-in-out forwards;
+          animation: moveDown 1s ease-in-out forwards;
+  opacity: 0;
 }
 
 section.hero svg.down-arrow {
   stroke: white;
   position: absolute;
-  bottom: 2em;
+  bottom: 5em;
   width: 1em;
+  animation: moveArrow 1s alternate-reverse infinite;
 }
 
 section.hero svg.down-arrow path {
@@ -126,6 +128,11 @@ section.hero svg.down-arrow path {
 
 .more-info .desc {
   line-height: 1.5rem;
+}
+
+.open-nav {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media only screen and (min-width: 680px) {
@@ -187,6 +194,7 @@ section.hero svg.down-arrow path {
   section.hero svg.down-arrow {
     stroke: black;
     position: unset;
+    margin-top: 1em;
   }
   section.hero svg.down-arrow path {
     fill: black;
@@ -229,6 +237,77 @@ section.hero svg.down-arrow path {
   }
   .feature {
     gap: 0;
+  }
+  section.hero svg.down-arrow {
+    margin-top: 6em;
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes moveArrow {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
