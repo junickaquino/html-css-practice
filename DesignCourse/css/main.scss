@@ -349,4 +349,12 @@ nav {
       bottom: -2em;
     }
   }
+
+  .testimonials-section ul {
+    display: flex;
+
+    li {
+      margin: 0 1em;
+    }
+  }
 }
