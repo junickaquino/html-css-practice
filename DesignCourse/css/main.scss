@@ -323,4 +323,30 @@ nav {
   .primary-cta {
     margin-right: 1em;
   }
+
+  ul.features-list {
+    display: block;
+    margin-left: 5em;
+
+    li {
+      font-size: 1.4em;
+
+      &::before {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .features-section {
+    position: relative;
+
+    img {
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 350px;
+      bottom: -2em;
+    }
+  }
 }
